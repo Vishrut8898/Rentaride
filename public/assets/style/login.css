@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f6f6f6;
+}
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -11px rgba(0, 0, 0, 0.75);
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 3rem;
+}
+.login h1 {
+  margin-bottom: 2rem;
+}
+.login div label {
+  margin-right: 1rem;
+}
+.image2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 0 2rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: 0;
+  width: 300px;
+  border-bottom: 1px solid #a1a1a1;
+  padding: 10px 5px 2px 5px;
+  outline: none;
+}
+.image2 a {
+  margin-top: 1.5rem;
+  font-size: 12px;
+}
+.login-btn {
+  margin-top: 2rem;
+  padding: 8px 15px;
+  color: #fff;
+  font-weight: bold;
+  background-color: sandybrown;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+.login-btn:hover {
+  background-color: coral;
+  cursor: pointer;
+}
+small {
+  color: #f68175;
+  font-size: 12px;
+  padding-left: 2.5rem;
+}
+
+.form-control-2.success-2 input {
+  border-bottom: 1px solid #2ecc71;
+}
+.form-control-2.error-2 small {
+  visibility: visible;
+}
+.form-control-2.error-2 input {
+  border-bottom: 1px solid #f68175;
+}
+
+@media (max-width: 800px) {
+  .container {
+    background-color: #fff;
+  }
+  .login-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+  }
+  .image2 {
+    padding: 0;
+    margin-top: -70px;
+  }
+}

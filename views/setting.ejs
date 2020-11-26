@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details Page</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/assets/style/setting-up.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/assets/style/setting-up-respo.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <img src="https://i.postimg.cc/fbMtZH7g/pic.png" alt="" />
+      <div class="title">rentaride</div>
+    </header>
+    <form class="container" id="container" action="/details" method="POST">
+      <span class="depart" id="depart">
+        <div class="icon-1" id="icon-1">
+          <i class="fas fa-map-marker-alt fa-2x"></i>
+        </div>
+        <input
+          type="text"
+          name="depart-place"
+          placeholder="Where will you pick up the car ?"
+          class="depart-place"
+          id="depart-place"
+        />
+
+        <!---- date picker -->
+        <div class="date-picker">
+          <div class="selected-date" name="depart-date"></div>
+
+          <div class="dates">
+            <div class="month">
+              <div class="arrows prev-mth">&lt;</div>
+              <div class="mth"></div>
+              <div class="arrows next-mth">&gt;</div>
+            </div>
+
+            <div class="days"></div>
+          </div>
+        </div>
+
+        <!------- time picker  ----------->
+        <div class="time-picker" data-time="00:00">
+          <div class="hour">
+            <div class="hr-up"></div>
+            <input type="number" class="hr" value="00" />
+            <div class="hr-down"></div>
+          </div>
+
+          <div class="separator">:</div>
+
+          <div class="minute">
+            <div class="min-up"></div>
+            <input type="number" class="min" value="00" />
+            <div class="min-down"></div>
+          </div>
+        </div>
+      </span>
+
+      <!------ second span --------------->
+
+      <span class="return" id="return">
+        <div class="icon-2" id="icon-2">
+          <i class="fas fa-map-marker-alt fa-2x"></i>
+        </div>
+        <input
+          type="text"
+          name="return-place"
+          placeholder="Where will you return the car ?"
+          class="return-place"
+          id="return-place"
+        />
+
+        <!---- date picker -->
+        <div class="date-picker-2">
+          <div class="selected-date-2" name="return-date"></div>
+
+          <div class="dates-2">
+            <div class="month-2">
+              <div class="arrows-2 prev-mth-2">&lt;</div>
+              <div class="mth-2"></div>
+              <div class="arrows-2 next-mth-2">&gt;</div>
+            </div>
+
+            <div class="days-2"></div>
+          </div>
+        </div>
+
+        <!------- time picker  ----------->
+        <div class="time-picker-2" data-time="00:00">
+          <div class="hour-2">
+            <div class="hr-up-2"></div>
+            <input type="number" class="hr-2" value="00" />
+            <div class="hr-down-2"></div>
+          </div>
+
+          <div class="separator-2">:</div>
+
+          <div class="minute-2">
+            <div class="min-up-2"></div>
+            <input type="number" class="min-2" value="00" />
+            <div class="min-down-2"></div>
+          </div>
+        </div>
+      </span>
+      <button class="book" type="submit">SAVE INFO</button>
+      <a class="next" href="/booking">NEXT > </a>
+    </form>
+    <script
+      type="text/javascript"
+      src="/assets/javascript/setting-up.js"
+    ></script>
+  </body>
+</html>

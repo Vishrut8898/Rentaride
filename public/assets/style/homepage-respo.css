@@ -1,0 +1,145 @@
+@media (max-width: 1000px) {
+  .about p {
+    margin: 2rem;
+    font-size: 14px;
+  }
+  .four-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .six-benefits {
+    margin: 2rem 0;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .five-ways {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 2rem;
+  }
+  .five-ways div {
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .navi-bar ul {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .start {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .navi-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .hidden {
+    width: 50%;
+  }
+  .four-features {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .four-features div {
+    margin: 0.5rem;
+  }
+  .four-features div img {
+    width: 150px;
+  }
+  .four-features p {
+    font-size: 14px;
+  }
+  .six-benefits {
+    display: grid;
+    justify-items: center;
+  }
+  .links {
+    width: 60%;
+  }
+  .results {
+    width: 60%;
+  }
+  .cardy {
+    width: 200px;
+    height: 250px;
+  }
+  .cardy p {
+    font-size: 12px;
+  }
+  .cardy h1 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .five-ways {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 2rem;
+  }
+  .give-it-a-go .info {
+    width: 300px;
+  }
+  .give-it-a-go h1 {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .cally a {
+    font-size: 10px;
+    padding: 8px;
+  }
+  .tele i,
+  .locate i {
+    margin-right: 10px;
+  }
+  .none div {
+    padding: 0 1rem;
+  }
+  .four-features div img {
+    width: 100px;
+  }
+  .js img {
+    width: 30px;
+    padding: 1rem 0;
+  }
+  .hidden {
+    width: 80%;
+  }
+  .about p {
+    margin: 1rem;
+    font-size: 12px;
+  }
+  .six-benefits {
+    margin: 2rem 0;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .links {
+    width: 90%;
+  }
+  .result.show-result {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .five-ways {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 2rem;
+  }
+  .five-ways div {
+    margin: 2rem;
+  }
+}

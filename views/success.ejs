@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Cancelled</title>
+    <link rel="stylesheet" href="/assets/style/success.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-container">
+        <div class="icon-div">
+          <i class="fa fa-thumbs-up fa-4x" aria-hidden="true"></i>
+        </div>
+        <h1>Order Confirmed</h1>
+        <p>Enjoy your ride and have a safe journey :)</p>
+        <p>Your car code is : <strong class="code"></strong></p>
+        <a href="/">HOME</a>
+      </div>
+    </div>
+    <script>
+      const code = document.querySelector(".code");
+      const rdmCode = Math.floor((Math.random() + 8) * 999);
+      code.innerHTML = rdmCode;
+    </script>
+  </body>
+</html>

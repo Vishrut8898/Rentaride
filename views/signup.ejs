@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOGORIDE - SignUp</title>
+    <link type="text/css" rel="stylesheet" href="/assets/style/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="sign-up-page" id="sign-up-page">
+        <div class="sign-up" id="sign-up">
+          <h1>Sign up</h1>
+          <% if(error) { %>
+          <span style="text-align: left; color: red; font-size: 14px"
+            ><%= error %></span
+          >
+          <% } %>
+          <form id="form" action="/users/signup" method="POST">
+            <div class="form-control" id="form-control">
+              <label for="username">
+                <i class="fas fa-user"></i>
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Name as on driving license"
+                id="username"
+              />
+              <br /><small></small>
+            </div>
+            <div class="form-control" id="form-control">
+              <label for="email">
+                <i class="fas fa-envelope-square"></i>
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter email"
+                id="email"
+              />
+              <br /><small></small>
+            </div>
+            <div class="form-control" id="form-control">
+              <label for="number">
+                <i class="fas fa-mobile-alt"></i>
+              </label>
+              <input
+                type="number"
+                name="phone"
+                placeholder="Mobile Number"
+                id="number"
+              />
+              <br /><small></small>
+            </div>
+            <div class="form-control" id="form-control">
+              <label for="password">
+                <i class="fas fa-lock"></i>
+              </label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                id="password"
+              />
+              <br /><small></small>
+            </div>
+            <div class="form-control" id="form-control">
+              <label for="confirm">
+                <i class="fas fa-lock"></i>
+              </label>
+              <input
+                type="password"
+                name="password2"
+                placeholder="Confirm Password"
+                id="confirm"
+              />
+              <br /><small></small>
+            </div>
+            <input
+              type="submit"
+              value="SIGN UP"
+              class="register-btn"
+              id="register-btn"
+            />
+          </form>
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/XJB9SW-0L/signup.jpg" alt="" />
+          <a href="/users/login">I am already a member</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const username = document.querySelector("#username");
+      username.addEventListener("input", () => {
+        let Name = username.value;
+        localStorage.setItem("name", Name);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f6f6f6;
+}
+.sign-up-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 15px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -11px rgba(0, 0, 0, 0.75);
+}
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.sign-up h1 {
+  margin-bottom: 2rem;
+}
+.sign-up div label {
+  margin-right: 1rem;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.image a {
+  margin-top: 4rem;
+  font-size: 12px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  border: 0;
+  width: 300px;
+  border-bottom: 1px solid #a1a1a1;
+  padding: 10px 5px 2px 5px;
+  outline: none;
+}
+.register-btn {
+  margin-top: 2rem;
+  padding: 8px 15px;
+  color: #fff;
+  font-weight: bold;
+  background-color: sandybrown;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+.register-btn:hover {
+  background-color: coral;
+  cursor: pointer;
+}
+small {
+  color: #f68175;
+  font-size: 12px;
+  padding-left: 2.5rem;
+}
+.form-control.success input {
+  border-bottom: 1px solid #2ecc71;
+}
+.form-control.error small {
+  visibility: visible;
+}
+.form-control.error input {
+  border-bottom: 1px solid #f68175;
+}
+
+@media (max-width: 800px) {
+  .container {
+    background: #fff;
+  }
+  .sign-up-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    box-shadow: none;
+  }
+  .sign-up {
+    padding: 1rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"] {
+    width: 200px;
+  }
+}

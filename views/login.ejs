@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RENTARIDE - Log In</title>
+    <link type="text/css" rel="stylesheet" href="/assets/style/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    
+      <!-------- LOGIN ------------------------------->
+
+	<div class="container">
+      <div class="login-page" id="login-page">
+        <div class="login" id="login">
+          <h1>Log In</h1>
+          <% if(error) { %>
+            <span style="text-align: left; color: red; font-size: 14px"
+              ><%= error %></span
+            >
+            <% } %>
+          <form id="form-2" method="POST" action="/users/login">
+            <div class="form-control-2" id="form-control-2">
+              <label for="username-2">
+                <i class="fas fa-user"></i>
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Your Email"
+                id="username-2"
+              />
+              <br /><small></small>
+            </div>
+
+            <div class="form-control-2" id="form-control-2">
+              <label for="password-2">
+                <i class="fas fa-lock"></i>
+              </label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                id="password-2"
+              />
+              <br /><small></small>
+            </div>
+
+            <input
+              type="submit"
+              form="form-2"
+              class="login-btn"
+              id="login-btn"
+              value="Log In"
+            />
+          </form>
+        </div>
+        <div class="image2" id="image2">
+          <img src="https://i.postimg.cc/rmwp6NX9/login.jpg" alt="" />
+          <a href="">Let's first register.</a>
+        </div>
+      </div>
+    </div>
+</div>
+  </body>
+</html>

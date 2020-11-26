@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -10;
+}
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3px 15px 10px 15px;
+  border-bottom: 4px solid black;
+  min-height: 8vh;
+  z-index: 10;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.user i {
+  margin-right: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+.burger {
+  cursor: pointer;
+  position: absolute;
+  left: 3%;
+  top: 30%;
+  display: none;
+}
+.line1,
+.line2,
+.line3 {
+  width: 20px;
+  height: 3px;
+  margin: 3px;
+  background-color: black;
+}
+.aside {
+  background-color: #ececec;
+  position: fixed;
+  left: 0;
+  min-height: 100vh;
+  z-index: 10;
+}
+.aside p {
+  color: #808080;
+  font-size: 12px;
+  padding: 0 5px;
+  margin-top: 1.5rem;
+}
+.aside i {
+  margin: 0 5px;
+  color: sandybrown;
+}
+.aside div {
+  font-size: 12px;
+  color: #a1a1a1;
+  padding: 5px 15px;
+}
+.aside .pick-up-spot div {
+  border: 1px solid #a1a1a1;
+  width: 300px;
+  background-color: #fff;
+}
+.aside .pick-up-spot div:nth-of-type(2) {
+  border-top: none;
+}
+#select-name {
+  color: black;
+}
+.time {
+  display: flex;
+  margin-left: -1rem;
+}
+.pick-up-time p,
+.drop-off-time p {
+  margin-left: -10px;
+}
+.pick-up-box,
+.drop-off-box {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #a1a1a1;
+}
+.pick-up-box h4,
+.drop-off-box h4 {
+  font-weight: lighter;
+  color: black;
+}
+.pick-up-box h1,
+.drop-off-box h1 {
+  color: black;
+  font-size: 14px;
+}
+#start-name,
+#return-name {
+  color: black;
+  padding-top: 10px;
+  font-size: 11px;
+}
+.aside.show {
+  transform: translateX(0);
+}
+.kilometers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.kilometers div {
+  width: 100px;
+  height: 50px;
+}
+.kilometers div:nth-of-type(2),
+.kilometers div:nth-of-type(3),
+.kilometers div:nth-of-type(5),
+.kilometers div:nth-of-type(6),
+.kilometers div:nth-of-type(8),
+.kilometers div:nth-of-type(9),
+.kilometers div:nth-of-type(11) {
+  border-left: none;
+}
+.kilometers div:nth-of-type(4),
+.kilometers div:nth-of-type(5),
+.kilometers div:nth-of-type(6) {
+  border-bottom: none;
+  border-top: none;
+}
+.kilometers div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: white;
+  border: 1px solid #a1a1a1;
+  padding: 10px 15px;
+}
+.kilometers .kilo.orange {
+  border: 2px solid sandybrown;
+  box-shadow: 0px 0px 15px -6px rgba(0, 0, 0, 1);
+}
+.main-container .order-box {
+  position: absolute;
+  top: 12vh;
+  left: 24%;
+  width: 73%;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+.order-box .car-info {
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+}
+.order-box .smalls {
+  display: flex;
+  flex-direction: column;
+}
+.order-box .smalls small {
+  margin: 10px 0;
+}
+.order-box .smalls small i {
+  margin-right: 10px;
+}
+.order-box .money {
+  position: absolute;
+  top: 30%;
+  right: 3%;
+  font-size: 1.2rem;
+}
+.order-box img {
+  width: 300px;
+  margin-left: 30px;
+}
+.order-box button {
+  position: absolute;
+  bottom: 3.2rem;
+  right: 2rem;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  background-color: sandybrown;
+}
+.order-box button:hover {
+  background-color: coral;
+  cursor: pointer;
+}
+.close1,
+.close2 {
+  background-color: #808080;
+  width: 20px;
+  height: 4px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+.close1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.close2 {
+  transform: rotate(45deg) translate(6px, 6px);
+}

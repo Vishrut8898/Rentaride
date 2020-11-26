@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page - RENTARIDE</title>
+    <link rel="stylesheet" href="/assets/style/admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <h1>rentaride</h1>
+      <div class="user" id="user">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <p>Admin Page</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>All Orders</h2>
+      <div class="pending" id="pending">
+        <p>
+          <i class="fa fa-info-circle" aria-hidden="true"></i>
+          Pending Orders
+        </p>
+      </div>
+    </div>
+    <div class="orders" id="orders">
+      <% details.forEach((detail) => { %>
+      <div class="order" id="order">
+        <div class="image">
+          <img src="" alt="" />
+        </div>
+        <p><strong>User Name : </strong><%= users.name %></p>
+        <p><strong>User Id : </strong><%= users.email %></p>
+        <p><strong>Depart Date : </strong><%= detail.departDate %></p>
+        <p><strong>Return Date : </strong><%= detail.returnDate %></p>
+        <p><strong> Pick Up Location : </strong><%= detail.departPlace %></p>
+        <p><strong> Drop Location : </strong><%= detail.returnPlace %></p>
+        <button class="done">DONE</button>
+        <button class="remove">REMOVE ORDER</button>
+      </div>
+      <% }) %>
+    </div>
+    <script>
+      const doneBtn = document.querySelectorAll(".done");
+      const removeBtn = document.querySelectorAll(".remove");
+
+      doneBtn.forEach((done) => {
+        done.addEventListener("click", () => {
+          done.style.display = "none";
+          const orderBox = done.parentElement;
+          const removeBtn = orderBox.querySelector(".remove");
+          removeBtn.style.display = "initial";
+        });
+      });
+
+      removeBtn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const orderBox = btn.parentElement;
+          orderBox.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>

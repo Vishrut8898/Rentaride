@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RENTARIDE</title>
+    <link rel="stylesheet" href="/assets/style/homepage.css" />
+    <link rel="stylesheet" href="/assets/style/homepage-respo.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--------  hidden navbar  ---------------------->
+    <ul class="listy hidden" id="hidden-nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#how-it-works">Workings</a></li>
+      <li><a href="#services">Services</a></li>
+      <% if(!user) { %>
+      <li class="login"><a href="/users/login">Log In</a></li>
+      <li class="sign-up"><a href="/users/signup">SIGN UP</a></li>
+      <% } else { %>
+      <li class="start"><a href="/details">RENTARIDE</a></li>
+      <li class="logout"><a href="/users/logout">Logout</a></li>
+      <% } %>
+      <div class="close" id="close">
+        <div class="close1"></div>
+        <div class="close2"></div>
+      </div>
+    </ul>
+
+    <!-----Top Bar --------------------------------->
+    <div class="up">
+      <div class="cally"><a href="/contact">ENQUIRY</a></div>
+      <div class="none">
+        <div class="tele">
+          <i class="fas fa-phone"></i>
+          <span class="numb">
+            <p>1-800-1234-147</p>
+            <p>1-800-1234-147</p>
+          </span>
+        </div>
+        <div class="locate">
+          <i class="fas fa-map-marker-alt"></i>
+          <span class="addressy">
+            <p>2314, Mira Road,</p>
+            <p>Mumbai, Thane</p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-------Nav bar---------------------------------->
+    <div class="navi-bar" id="navi-bar">
+      <h1>rentaride</h1>
+      <ul class="listy">
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#how-it-works">Workings</a></li>
+        <li><a href="#services">Services</a></li>
+        <% if(!user) { %>
+        <li class="login"><a href="/users/login">Log In</a></li>
+        <li class="sign-up"><a href="/users/signup">SIGN UP</a></li>
+        <% } else { %>
+        <li class="start"><a href="/details">RENTARIDE</a></li>
+        <li class="logout"><a href="/users/logout">Logout</a></li>
+        <% } %>
+      </ul>
+      <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line1"></div>
+        <div class="line1"></div>
+      </div>
+    </div>
+
+    <!-------Slideshow -------------------------------->
+
+    <div class="slidershow middle">
+      <div class="slides">
+        <div class="slide s1">
+          <img src="https://i.postimg.cc/Z5m4tx6y/slider-3.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://i.postimg.cc/ydbb1s5b/slider-2.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://i.postimg.cc/XNTnxbJL/slider-1.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://i.postimg.cc/qMy4556T/slider-4.jpg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="https://i.postimg.cc/90wNzsHF/slider-5.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!---------- features of website ------------------------->
+
+    <div class="features" id="features">
+      <div class="four-features">
+        <div class="card" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://i.postimg.cc/wTsSBR9c/android.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h2>Mobile App</h2>
+            <p class="card-text">
+              You can also download our mobile app on google play store and can
+              use it even on other platforms.
+            </p>
+          </div>
+        </div>
+        <div class="card res" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://i.postimg.cc/8zR9R8J7/respo.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h2>Responsive</h2>
+            <p class="card-text">
+              Our website consists of responsive design so that you can use it
+              on other platforms too.
+            </p>
+          </div>
+        </div>
+        <div class="card ui" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://i.postimg.cc/R0v8GPKX/uiux.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h2>Minimalist</h2>
+            <p class="card-text">
+              Our Website consists of latest sleek minimalistic design style
+              that can make you feel alive.
+            </p>
+          </div>
+        </div>
+        <div class="card js" style="width: 18rem">
+          <img
+            class="card-img-top"
+            src="https://i.postimg.cc/YCKTL29c/js.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h2>Javascript</h2>
+            <p class="card-text">
+              The important technology used for developing this web is
+              Javascript. A very powerful and light weight technology.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------- about section ------------------------------->
+    <div class="about" id="about">
+      <h2>ABOUT US</h2>
+      <p>
+        RENTARIDE is a car renting business corporation. We provide different
+        types of car services to our customers. We provide the best car renting
+        services that you won't find any where else. You can book any of your
+        favourite ride and you can ride it as many miles as you want and also
+        anywhere in the world with RENTARIDE. Customer is the number one thing
+        for us, customer is a king for us. <br />Enjoy your ride with RENTARIDE.
+      </p>
+    </div>
+
+    <!--------Benefits ---------------------------------------->
+
+    <div class="benefits" id="benefits">
+      <h2>BENEFITS</h2>
+      <div class="six-benefits">
+        <div class="links" id="links">
+          <div class="link blue" id="link-1">Fuel & Cost</div>
+          <div class="link" id="link-2">Assistance & Travel</div>
+          <div class="link" id="link-3">Insurance & Cars</div>
+        </div>
+        <div class="results" id="results">
+          <div class="result show-result" id="result-1">
+            <div class="cardy" id="cardy">
+              <i class="fas fa-gas-pump fa-4x"></i>
+              <h1>Fuel</h1>
+              <p>Around 50 KM of free fuel would be given to you.</p>
+            </div>
+            <div class="cardy" id="cardy">
+              <i class="fas fa-rupee-sign fa-4x"></i>
+              <h1>Cost</h1>
+              <p>Most Efficient Cost of about 10 Rs per km.</p>
+            </div>
+          </div>
+          <div class="result" id="result-2">
+            <div class="cardy" id="cardy">
+              <i class="fas fa-road fa-4x"></i>
+              <h1>Road Assistance</h1>
+              <p>
+                With RENTARIDE you will be given 24 x 7 assistance with
+                navigation support.
+              </p>
+            </div>
+            <div class="cardy" id="cardy">
+              <i class="fas fa-route fa-4x"></i>
+              <h1>Travelling</h1>
+              <p>
+                With RENTARIDE you will be allowed to travel anywhere in the
+                world.
+              </p>
+            </div>
+          </div>
+          <div class="result" id="result-3">
+            <div class="cardy" id="cardy">
+              <i class="fas fa-car-crash fa-4x"></i>
+              <h1>Insurance</h1>
+              <p>With RENTARIDE, damage insurance would be provided to you.</p>
+            </div>
+            <div class="cardy" id="cardy">
+              <i class="fas fa-car-side fa-4x"></i>
+              <h1>Cars</h1>
+              <p>
+                Enjoy the most luxurious experience with RENTARIDE awesome cars.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------- how it works ----------------------------------->
+    <div class="how-it-works" id="how-it-works">
+      <h2>HOW IT WORKS</h2>
+      <div class="five-ways">
+        <div class="one">
+          <i class="fas fa-sign-in-alt fa-3x"></i>
+          <h3>Sign Up</h3>
+          <p>
+            First look for sign up option on our website and get it done for
+            booking a ride.
+          </p>
+        </div>
+        <div class="two">
+          <i class="fas fa-address-card fa-3x"></i>
+          <h3>Details</h3>
+          <p>
+            Upload your details, most specifically about your driving license.
+          </p>
+          <p></p>
+        </div>
+
+        <div class="three">
+          <i class="fas fa-car fa-3x"></i>
+          <h3>Booking</h3>
+          <p>
+            Search for and book your favourite car and enter details for how
+            long you would rent.
+          </p>
+        </div>
+        <div class="four">
+          <i class="fas fa-comment-dots fa-3x"></i>
+          <h3>SMS</h3>
+          <p>
+            An SMS regarding your car details will be sent to you via rentaride
+            driver.
+          </p>
+        </div>
+        <div class="five">
+          <i class="fas fa-undo fa-2x"></i>
+          <h3>Enjoy</h3>
+          <p>
+            Enjoy your ride and return it to the same place you received the
+            car.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!------services --------------------------------------------->
+
+    <div class="services" id="services">
+      <h2>CAR SERVICES</h2>
+      <div class="image-section" id="image-section">
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/fLWncbQZ/find-1.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/zBq5xjWs/find-2.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/D0ZhTwx5/find-3.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/nzTxgDGC/find-4.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/yY2HMBcX/find-5.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/Qt6L0rj7/find-6.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/Hnhgs1Km/find-7.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/NfKtCL9j/find-8.jpg" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/8zWSD3b8/find-8.png" alt="" />
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/9X8VByfk/find-8.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-----Give it a go --------------------------------------->
+    <div class="give-it-a-go" id="give-it-a-go">
+      <div class="info" id="info">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          ipsam nihil non vero? Nulla facere itaque ipsam soluta obcaecati
+          architecto.
+        </p>
+        <h1>GIVE IT A GO</h1>
+        <a href="#" class="lets-go">LET'S GO</a>
+      </div>
+    </div>
+
+    <!---------FOOTER ------------------------------------------>
+    <footer class="footer" id="footer">
+      <div class="thank">
+        <h1>Thank You</h1>
+        <p>Contact: +91 123-456-7890</p>
+        <p>Email: vishrut9869@gmail.com</p>
+      </div>
+    </footer>
+
+    <!----- script tags --------------------------------------->
+    <script src="./assets/javascript/homepage.js"></script>
+  </body>
+</html>

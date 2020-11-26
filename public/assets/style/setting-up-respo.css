@@ -1,0 +1,137 @@
+@media (max-width: 1000px) {
+  .container .depart input,
+  .container .return input {
+    width: 400px;
+    padding-left: 0;
+  }
+  .date-picker,
+  .date-picker-2 {
+    max-width: 240px;
+  }
+  .time-picker .hour .hr-up,
+  .time-picker .hour .hr-down,
+  .time-picker .minute .min-up,
+  .time-picker .minute .min-down,
+  .time-picker-2 .hour-2 .hr-up-2,
+  .time-picker-2 .hour-2 .hr-down-2,
+  .time-picker-2 .minute-2 .min-up-2,
+  .time-picker-2 .minute-2 .min-down-2 {
+    left: 20%;
+  }
+  .icon-1,
+  .icon-2 {
+    width: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  header img {
+    width: 100px;
+  }
+  header div {
+    font-size: 45px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .depart input,
+  .container .return input {
+    width: 350px;
+    padding-left: 0;
+  }
+  .container .depart {
+    display: grid;
+    grid-template-areas:
+      "icon-1 depart-place depart-place"
+      "date-picker date-picker time-picker";
+  }
+  .container .return {
+    display: grid;
+    grid-template-areas:
+      "icon-2 return-place return-place"
+      "date-picker-2 date-picker-2 time-picker-2";
+  }
+  .container .date-picker {
+    grid-area: date-picker;
+  }
+  .container .time-picker {
+    grid-area: time-picker;
+  }
+  .container .date-picker-2 {
+    grid-area: date-picker-2;
+  }
+  .container .time-picker-2 {
+    grid-area: time-picker-2;
+  }
+  .container .depart-place {
+    grid-area: depart-place;
+  }
+  .container .return-place {
+    grid-area: return-place;
+  }
+  .icon-1 {
+    grid-area: icon-1;
+    width: 60px;
+  }
+  .icon-2 {
+    grid-area: icon-2;
+    width: 60px;
+  }
+  .date-picker,
+  .date-picker-2 {
+    max-width: 270px;
+  }
+  .time-picker .hour .hr-up,
+  .time-picker .hour .hr-down,
+  .time-picker .minute .min-up,
+  .time-picker .minute .min-down,
+  .time-picker-2 .hour-2 .hr-up-2,
+  .time-picker-2 .hour-2 .hr-down-2,
+  .time-picker-2 .minute-2 .min-up-2,
+  .time-picker-2 .minute-2 .min-down-2 {
+    left: 22%;
+  }
+  .book {
+    width: 130px;
+    font-size: 1rem;
+    margin: 1.5rem auto 2.5rem auto;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .depart input,
+  .container .return input {
+    width: 255px;
+    padding-left: 0;
+  }
+  .icon-1 {
+    width: 50px;
+  }
+  .icon-2 {
+    width: 50px;
+  }
+  .container .date-picker,
+  .container .date-picker-2 {
+    width: 200px;
+  }
+  .container .time-picker,
+  .container .time-picker-2 {
+    width: 105px;
+    padding-left: 15px;
+  }
+}
+@media (max-height: 400px) {
+  body {
+    min-height: 160vh;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RENTARIDE - Contact Us</title>
+    <link rel="stylesheet" href="/assets/style/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="contact-page" id="contact-page">
+        <div class="contact" id="contact">
+          <h1>Contact Us</h1>
+          <% if(error) { %>
+          <span style="text-align: left; color: red; font-size: 14px"
+            ><%= error %></span
+          >
+          <% } %>
+          <form id="form" action="/contact" method="POST">
+            <div class="form-control" id="form-control">
+              <label for="username">
+                <i class="fas fa-user"></i>
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Full Name"
+                id="username"
+              />
+              <br />
+            </div>
+            <div class="form-control" id="form-control">
+              <label for="email">
+                <i class="fas fa-envelope-square"></i>
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Your Email"
+                id="email"
+              />
+              <br />
+            </div>
+            <div class="form-control" id="form-control">
+              <label for="number">
+                <i class="fas fa-mobile-alt"></i>
+              </label>
+              <input
+                type="tel"
+                name="tel"
+                placeholder="Your Phone Number"
+                id="number"
+              />
+              <br />
+            </div>
+            <div class="form-control" id="form-control">
+              <label for="message">
+                <i class="fa fa-comments" aria-hidden="true"></i>
+              </label>
+              <textarea
+                name="message"
+                id="mssg"
+                cols="44"
+                rows="7"
+                placeholder="Enter Your Message Here..."
+              ></textarea>
+            </div>
+            <input
+              type="submit"
+              value="CONTACT US"
+              class="contact-btn"
+              id="contact-btn"
+            />
+          </form>
+        </div>
+        <div class="image" id="image">
+          <img src="https://i.postimg.cc/nLhmn5hh/help.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

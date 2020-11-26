@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+    <link rel="stylesheet" href="/assets/style/order.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="navbar" id="navbar">
+      <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line1"></div>
+        <div class="line1"></div>
+      </div>
+      <h1>rentaride</h1>
+      <div class="user" id="user">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <p><%= name %></p>
+      </div>
+    </div>
+    <div class="container" id="container">
+      <div id="aside" class="aside">
+        <p>
+          <i class="fa fa-check-circle" aria-hidden="true"></i>YOUR PICK UP SPOT
+        </p>
+        <div class="pick-up-spot" id="pick-up-spot">
+          <div>
+            Your Starting Point is > <br />
+            <small id="start-name"></small>
+          </div>
+          <div>
+            Your Return Point is > <br />
+            <small id="return-name"></small>
+          </div>
+        </div>
+        <div class="time" id="time">
+          <div class="pick-up-time" id="pick-up-time">
+            <p>
+              <i class="fa fa-check-circle" aria-hidden="true"></i>PICK UP TIME
+            </p>
+            <div class="pick-up-box">
+              <h1 class="pick-up-date" id="pick-up-date"></h1>
+            </div>
+          </div>
+          <div class="drop-off-time" id="drop-off-time">
+            <p>
+              <i class="fa fa-check-circle" aria-hidden="true"></i>DROP OFF TIME
+            </p>
+            <div class="drop-off-box">
+              <h1 class="drop-off-date" id="drop-off-date"></h1>
+            </div>
+          </div>
+        </div>
+        <p>
+          <i class="fa fa-check-circle" aria-hidden="true"></i> DISTANCE PACKAGE
+        </p>
+        <div class="kilometers" id="kilometers">
+          <div class="kilo-1 kilo orange" id="kilo-1">50 miles</div>
+          <div class="kilo-2 kilo" id="kilo-2">100 miles</div>
+          <div class="kilo-3 kilo" id="kilo-3">150 miles</div>
+          <div class="kilo-4 kilo" id="kilo-4">200 miles</div>
+          <div class="kilo-5 kilo" id="kilo-5">250 miles</div>
+          <div class="kilo-6 kilo" id="kilo-6">300 miles</div>
+          <div class="kilo-7 kilo" id="kilo-7">350 miles</div>
+          <div class="kilo-8 kilo" id="kilo-8">400 miles</div>
+          <div class="kilo-9 kilo" id="kilo-9">450 miles</div>
+        </div>
+      </div>
+      <div class="main-container" id="main-container">
+        <form class="order-box" id="order-box" action="/pay" method="POST">
+          <img alt="it is here" />
+          <div class="car-info" id="car-info">
+            <h3 class="car-name" id="car-name"></h3>
+            <div class="smalls" id="small">
+              <small class="seater"></small>
+              <small class="gear"></small>
+              <small class="mileage"></small>
+            </div>
+            <div class="money" id="money">
+              <h3>
+                Rs
+                <span class="price"></span>
+                /-
+              </h3>
+            </div>
+          </div>
+          <button type="submit" class="book-now">PROCEED TO RENT</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/assets/javascript/order.js"></script>
+  </body>
+</html>
